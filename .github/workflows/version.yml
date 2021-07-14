@@ -11,10 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run: npm install -g semantic-release               \
-          @semantic-release/changelog               \
-          @semantic-release/commit-analyzer         \
-          @semantic-release/exec                    \
-          @semantic-release/git                     \
-          @semantic-release/release-notes-generator
+      - run: npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec @semantic-release/git @semantic-release/release-notes-generator
       - run: npx semantic-release
