@@ -1,8 +1,5 @@
 name: Release
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   release:
@@ -14,4 +11,6 @@ jobs:
         with:
           node-version: '16'
       - run: npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec @semantic-release/git @semantic-release/release-notes-generator
-      - run: npx semantic-release
+      - run: |
+          export version='${version}'
+          npx semantic-release -t ${GITHUB_REF##*/}-v${version}
