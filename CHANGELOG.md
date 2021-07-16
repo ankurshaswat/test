@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.1.0](https://github.com/ankurshaswat/test/compare/v1.0.0...v1.1.0) (2021-07-16)
+
+
+### Features
+
+* **resource:** added resource file ([39e0a86](https://github.com/ankurshaswat/test/commit/39e0a8676fc659a2f7ba316935b4643be00be909))
+
 # 1.0.0 (2021-07-14)
 
 
