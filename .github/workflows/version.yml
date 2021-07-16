@@ -12,6 +12,5 @@ jobs:
           node-version: '16'
       - run: npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec @semantic-release/git @semantic-release/release-notes-generator
       - run: |
-          TAGFORMAT="v\\\${version}"
-          echo $TAGFORMAT
-          npx semantic-release -t $TAGFORMAT
+          export version='${version}'
+          npx semantic-release -t ${GITHUB_REF##*/}-v${version}
