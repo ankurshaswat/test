@@ -15,6 +15,14 @@
             {
                 "prepareCmd": "echo ${nextRelease.version}"
             }
+        ],
+        [
+            "@semantic-release/git",
+            {
+                "assets": [
+                    "CHANGELOG.md"
+                ]
+            }
         ]
     ]
 }
